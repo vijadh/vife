@@ -1,0 +1,123 @@
+//variable
+//font-size
+$siz_xl = 120px
+$siz_lg = 80px
+$siz_md = 56px
+$siz_st = 48px
+
+//font-weight
+$wit_light = 200;
+	
+$shadow = 2px 4px 8px rgba(0,0,0,.12)
+
+html,body{
+	background-color: #28292e;
+	color: $color_white;
+	font-weight: $wit_light;
+}
+{$wrapper}{
+	&__{
+		&container{
+			// padding: 24px;
+		}
+	}
+}
+{$header}{
+	padding: 32px;
+	text-align: center;
+
+	+mq(gt-md){
+		padding: 80px 40px;
+	}
+	&__{
+		&groom,
+		&bride{
+			font-size: $siz_lg;
+			font-weight: $wit_light;
+			letter-spacing: 2px;
+			// text-transform: uppercase;
+			// font-family: $family_serif;
+
+			+mq(gt-md){
+				font-size: $siz_xl;
+				font-weight: $weight_bolder;
+			}
+		}
+		&weds{
+			color: $brand_text;
+			font-size: 24px;
+		}
+	}
+}
+
+//variable
+
+
+{$pre}banner{
+	&__{
+		&container{
+			padding: 40px 0;
+			
+			+mq(gt-md){
+				padding: 80px 0;
+			}
+		}
+		&thumb{
+			margin: 0 auto;
+			text-align: center;
+			line-height: 0;
+			position: relative;
+			z-index: 1;
+			box-shadow: $shadow;
+
+			+mq(gt-md){
+				max-width: 50%;
+			}
+			img{
+				max-width: 100%;
+				height: auto;
+			}
+		}
+		&main{
+			padding: 40px 80px;
+			// margin: 0 auto;
+			// transform: translateY(-70%);
+			box-shadow: $shadow;
+			position: relative;
+			// z-index: 1;
+
+			background-color: $brand_text;
+
+			+mq(gt-md){
+				max-width: 50%;
+				padding: 80px 120px;
+				margin-top: -360px;
+			}
+		}
+		&content{
+			position: relative;
+			z-index: 11;
+		}
+		&title{
+			font-size: $size_lg;
+			line-height: 1.2;
+
+			+mq(gt-md){
+				font-size: $siz_md;
+				font-weight: $wit_light;
+			}
+		}
+		&alpha{
+			opacity: .8;
+		}
+		&caption{
+			opacity: .8;
+			margin-top: 16px;
+			max-width: 360px;
+		}
+		&mark{
+			font-size: $siz_xl;
+			font-weight: $weight_bolder;
+		}
+	}
+}
