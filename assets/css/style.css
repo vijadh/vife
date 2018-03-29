@@ -596,3 +596,7 @@ a {
   background-color: #009946;
   color: #fff;
 }
+.vd-gmap {
+  width: 100%;
+  height: 600px;
+}
