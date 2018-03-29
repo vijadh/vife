@@ -47,7 +47,7 @@ $(document).ready(function(){
             var thisOffsetTop = $(this).offset().top;
             if (thisOffsetTop <= windowTop + 120) {
                 var $selVal = $(this).data("menu-title");
-                $($('[data-menu-value]')).text($selVal);
+                $($('[data-menu-label]')).text($selVal);
             } else {
                 return;
             }
@@ -65,8 +65,14 @@ $(document).ready(function(){
         }
     });
 
+    $('body').click(function(e){
+    	if(!$('#menu').is(e.target) && $('#menu').has(e.target).length===0){
+    		$('#menu').removeClass("vd-menu--active");
+    	}
+    });
+
     $(".vd-menu__label").click(function(){
-    	
+    	$(this).closest('.vd-menu').toggleClass('vd-menu--active');
     });
 });
 

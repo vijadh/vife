@@ -22,7 +22,7 @@
                         </div>
                     </div>
                     <div class="vd-wrapper__content">
-                        <div class="vd-banner" data-menu-title="Invite">
+                        <div class="vd-banner" id="invite" data-menu-title="Invite">
                             <div class="vd-banner__container">
                                 <div class="vd-banner__thumb">
                                     <img src="/assets/images/wide/couple2.jpg" class="vd-img">
@@ -37,7 +37,7 @@
                             </div>
                         </div>
 
-                        <div class="vd-section vd-spacer" data-menu-title="Bride">
+                        <div class="vd-section vd-spacer" id="vipic" data-menu-title="ViPic">
                             <div class="vd-containe">
                                 <div class="vd-section__header">
                                     <div class="vd-section__headline">ViPic</div>
@@ -59,21 +59,21 @@
                                                     <div class="vd-vipics__list">
                                                         <div class="vd-vipics__item">
                                                             <div class="vd-vipic">
-                                                                <div class="vd-vipic__container">
+                                                                <div class="vd-vipic__container" style="background-image: url(assets/images/wide/couple1.jpg)">
                                                                     <div class="vd-vipic__title">Dive</div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="vd-vipics__item">
                                                             <div class="vd-vipic">
-                                                                <div class="vd-vipic__container">
+                                                                <div class="vd-vipic__container" style="background-image: url(assets/images/wide/couple6.jpg)">
                                                                     <div class="vd-vipic__title">Done</div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="vd-vipics__item">
                                                             <div class="vd-vipic">
-                                                                <div class="vd-vipic__container">
+                                                                <div class="vd-vipic__container" style="background-image: url(assets/images/wide/couple5.jpg)">
                                                                     <div class="vd-vipic__title">Does</div>
                                                                 </div>
                                                             </div>
@@ -89,21 +89,21 @@
                                                     <div class="vd-vipics__list">
                                                         <div class="vd-vipics__item">
                                                             <div class="vd-vipic">
-                                                                <div class="vd-vipic__container">
+                                                                <div class="vd-vipic__container" style="background-image: url(assets/images/wide/couple2.jpg)">
                                                                     <div class="vd-vipic__title">Dive</div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="vd-vipics__item">
                                                             <div class="vd-vipic">
-                                                                <div class="vd-vipic__container">
+                                                                <div class="vd-vipic__container" style="background-image: url(assets/images/wide/couple3.jpg)">
                                                                     <div class="vd-vipic__title">Done</div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="vd-vipics__item">
                                                             <div class="vd-vipic">
-                                                                <div class="vd-vipic__container">
+                                                                <div class="vd-vipic__container" style="background-image: url(assets/images/wide/couple4.jpg)">
                                                                     <div class="vd-vipic__title">Does</div>
                                                                 </div>
                                                             </div>
@@ -116,7 +116,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="vd-spacer"  data-menu-title="Family">
+                        <div class="vd-spacer"  id="gallery" data-menu-title="Gallery">
                             <div class="vd-container">
                                 <div class="vd-gallerys">
                                     <div class="vd-gallerys__item">
@@ -163,15 +163,16 @@
                 </div>
             </div>
         </div>
-        <div class="vd-menu">
+        <div class="vd-menu" id="menu">
             <div class="vd-menu__container">
                 <div class="vd-menu__label">
-                    <div class="vd-menu__value" data-menu-value="Wedding">Wedding</div>
+                    <div class="vd-menu__value" data-menu-label="true">Wedding</div>
                 </div>
                 <div class="vd-menu__main">
                     <div class="vd-menu__list">
-                        <a class="vd-menu__item">Events</a>
-                        <a class="vd-menu__item">Gallery</a>
+                        <a class="vd-menu__item" href="#wedding" data-menu-item="wedding">Wedding</a>
+                        <a class="vd-menu__item" href="#invite" data-menu-item="invite">Invite</a>
+                        <a class="vd-menu__item" href="#vipic" data-menu-item="vipic">Videos & Pics</a>                        
                     </div>
                 </div>
             </div>

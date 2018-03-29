@@ -213,7 +213,7 @@ body {
 @media (min-width: 1400px) {
   html,
   body {
-    font-size: 1vw;
+    font-size: 1.2vw;
   }
 }
 a {
@@ -287,6 +287,7 @@ a {
 @media (min-width: 1000px) {
   .vd-banner__thumb {
     max-width: 50%;
+    min-height: 360px;
   }
 }
 .vd-banner__thumb img {
@@ -445,9 +446,14 @@ a {
   z-index: 1;
 }
 .vd-vipics__title {
-  font-size: 24px;
   color: #009946;
   margin-bottom: 32px;
+  font-size: 24px;
+}
+@media (min-width: 1400px) {
+  .vd-vipics__title {
+    font-size: 2vw;
+  }
 }
 .vd-vipics__block ~ .vd-vipics__block {
   margin-top: 80px;
@@ -465,11 +471,14 @@ a {
   padding-left: 32px;
 }
 .vd-vipic__container {
-  background-color: #333;
+  background-color: #212224;
   padding: 24px;
   box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
   width: 240px;
   height: 135px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .vd-vipic__header {
   display: block;
@@ -493,7 +502,7 @@ a {
   padding: 24px;
   background-color: #fff;
   box-shadow: 2px 4px 8px rgba(0,0,0,0.12);
-  color: #333;
+  color: #212224;
 }
 .vd-footer {
   padding: 40px 0;
@@ -525,9 +534,6 @@ a {
 .vd-footer__caption {
   color: #666;
   max-width: 360px;
-}
-.vd-menu {
-  font-size: 12px;
 }
 .vd-menu__container {
   position: fixed;
@@ -561,9 +567,9 @@ a {
   position: absolute;
   top: -16px;
   right: -16px;
-  background-color: #333;
+  background-color: #212224;
   box-shadow: 2px 4px 8px rgba(0,0,0,0.12);
-  padding-top: 60px;
+  padding-top: 80px;
   min-width: 200px;
   display: none;
 }
