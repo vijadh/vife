@@ -1,25 +1,73 @@
 $(document).ready(function(){
-	$(window).scroll(function() {
-	    var scroll = $(window).scrollTop();
-	    if (scroll >= 1) {
-	        $(".me-header").addClass("me-header--affix");
-	    } else {
-	    	$(".me-header--affix").removeClass("me-header--affix");
-	    }
-	});
+	// $(window).scroll(function() {
+	//     var scroll = $(window).scrollTop();
+	//     if (scroll >= 1) {
+	//         $(".me-header").addClass("me-header--affix");
+	//     } else {
+	//     	$(".me-header--affix").removeClass("me-header--affix");
+	//     }
+	// });
 
-	$('a[href*=#]:not([href=#])').click(function() {
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-	      	var target = $(this.hash);
-	      	target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	      	if (target.length) {
-	        	$('html,body').animate({
-	          		scrollTop: target.offset().top - 54
-	        	}, 500);
-	        	return false;
-	      	}
-	    }
-	});
+	// $('a[href*=#]:not([href=#])').click(function() {
+	//     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	//       	var target = $(this.hash);
+	//       	target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	//       	if (target.length) {
+	//         	$('html,body').animate({
+	//           		scrollTop: target.offset().top - 54
+	//         	}, 500);
+	//         	return false;
+	//       	}
+	//     }
+	// });
+
+	// $(window).scroll(function(){
+	// 	var winScroll = $(window).scrollTop();
+	// 	var menuTitle = $('[data-menu-title]');
+		
+	// 	$(menuTitle).each(function(){
+	// 		_this = $(this).data;
+
+	// 		alert(_this);
+	// 	});
+	// });
+
+
+	function handleScroll() {
+        if (typeof window.positionScroll !== "undefined") {//Already there is a scroll enabled.
+            return;
+        }
+        window.positionScroll = setTimeout(positionScroll, 250);
+    }
+
+	function positionScroll() {        
+        var windowTop = $(window).scrollTop();
+        var selected = null;
+        $('[data-menu-title]').each(function () {
+            var thisOffsetTop = $(this).offset().top;
+            if (thisOffsetTop <= windowTop + 120) {
+                var $selVal = $(this).data("menu-title");
+                $($('[data-menu-value]')).text($selVal);
+            } else {
+                return;
+            }
+        });            
+        delete window.positionScroll;
+    }
+
+	$(window).bind({
+        // resize: function () {
+        //     defaultTrigger();
+        // },
+        scroll: function () {
+            // defaultTrigger();
+            handleScroll();
+        }
+    });
+
+    $(".vd-menu__label").click(function(){
+    	
+    });
 });
 
 // //typeform enquiry script

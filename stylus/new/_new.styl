@@ -27,6 +27,50 @@ title(){
 	}
 }
 
+caption(){
+	opacity: .8;
+	margin-top: 16px;
+	max-width: 360px;
+	max-width: 20vw;
+}
+
+headline(){
+	font-size: $siz_lg;
+	font-weight: $weight_bolder;
+
+	+mq(gt-md){
+		font-size: $siz_xl;
+		line-height: 1.2;
+	}
+	+mq(gt-xl){
+		font-size: 7.2vw;
+	}
+}
+
+cards(){
+	padding: 40px 80px;
+	box-shadow: $shadow;
+	position: relative;
+	background-color: $brand_text;
+
+	+mq(gt-md){
+		// max-width: 50%;
+		padding: 80px 120px;
+	}
+}
+
+mark(){
+	font-size: $siz_lg;
+	font-weight: $weight_bolder;
+
+	+mq(gt-md){
+		font-size: $siz_xl;
+		line-height: 1;
+	}
+	+mq(gt-xl){
+		font-size: 7.2vw;
+	}
+}
 //===============================================================
 // selector
 //===============================================================
@@ -36,6 +80,7 @@ $section 		= $pre+"section"
 $gallery 		= $pre+"gallery"
 $footer 		= $pre+"footer"
 $menu 			= $pre+"menu"
+$vipic 			= $pre+"vipic"
 
 //===============================================================
 // rules
@@ -81,22 +126,11 @@ a{
 	&__{
 		&groom,
 		&bride{
-			font-size: $size_xl;
-			font-weight: $weight_bolder;
-			// text-transform: uppercase;
-			// font-family: $family_serif;
-
-			+mq(gt-md){
-				letter-spacing: 2px;
-				font-size: $siz_xl;
-			}
-			+mq(gt-xl){
-				font-size: 7.2vw;
-			}
+			headline();
 		}
 		&weds{
 			color: $brand_text;
-			font-size: 24px;
+			font-size: $size_lg;
 
 			+mq(gt-xl){
 				font-size: 2vw;
@@ -131,18 +165,10 @@ a{
 			}
 		}
 		&main{
-			padding: 40px 80px;
-			// margin: 0 auto;
-			// transform: translateY(-70%);
-			box-shadow: $shadow;
-			position: relative;
-			// z-index: 1;
-
-			background-color: $brand_text;
+			cards();
 
 			+mq(gt-md){
 				max-width: 50%;
-				padding: 80px 120px;
 				margin-top: -360px;
 			}
 		}
@@ -157,21 +183,10 @@ a{
 			opacity: .8;
 		}
 		&caption{
-			opacity: .8;
-			margin-top: 16px;
-			max-width: 360px;
-			max-width: 20vw;
+			caption();
 		}
 		&mark{
-			font-size: $siz_lg;
-			font-weight: $weight_bolder;
-
-			+mq(gt-md){
-				font-size: $siz_xl;
-			}
-			+mq(gt-xl){
-				font-size: 7.2vw;
-			}
+			mark();
 		}
 	}
 }
@@ -179,12 +194,87 @@ a{
 {$section}{
 
 	&__{
-		&container{
-
+		&header{
+			text-align: center;
+			margin-bottom: 80px;
 		}
 		&title{
+			headline();
+
+			&:after{
+				content: "";
+				display: block;
+				margin: 8px auto;
+				box(60px, 2px);
+				background-color: currentColor;
+			}
+		}
+		&desc{
+			margin-top: 24px;
+		}
+		&container{
+			display: flex;
+		}
+		&main{
+			flex: 1;
+		}
+		&aside{
+			flex: 1;
+		}
+		&paper{
+			cards();
+			height: 100%;
+		}
+		&heading{
 			title();
-			text-align: center;
+		}
+		&caption{
+			caption();
+		}
+		&mark{
+			mark();
+		}
+	}
+}
+
+{$vipic}{
+	&s{
+		padding: 80px;
+		position: relative;
+		z-index: 1;
+
+		&__{
+			&title{
+				font-size: $size_lg;
+				color: $brand_text;
+				margin-bottom: 32px;
+			}
+			&block{
+				& ~ &{
+					margin-top: 80px;
+				}
+			}
+			&container{
+				margin-left: -200px;
+			}
+			&list{
+				display: flex;
+				margin-left: -32px;
+			}
+			&item{
+				padding-left: 32px;
+			}		
+		}
+	}
+	&__{
+		&container{
+			background-color: $base_text;
+			padding: 24px;
+			box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
+			box(240px,(240px/16*9));
+		}
+		&header{
+			display: block;
 		}
 	}
 }
@@ -212,7 +302,10 @@ a{
 {$footer}{
 	padding: 40px 0;
 	color: $muted_text;
-
+	
+	// {$container}{
+	// 	max-width: 1200px;
+	// }
 	&__{
 		&container{
 			display: flex;
@@ -236,56 +329,57 @@ a{
 		}
 		&caption{
 			color: $muted_text;
+			max-width: 360px;
 		}
 	}
 }
 
 {$menu}{
 	font-size: $size_sm;
-	
+
 	&__{
 		&container{
 			position: fixed;
 			right: 32px;
 			top: @right;
+			z-index: 9000;
 		}
 		&label{
 			position: relative;
 			z-index: 10;
 			cursor: pointer;
-			// padding: 8px 16px;			
+			// padding: 8px 16px;
 			// box-shadow: $shadow;
 			// background-color: $base_text;
 
 			&:after{
 				content: "";
-				width: 20px;
-				height: 2px;
+				box(20px,2px);
 				color: $brand_text;
 				background-color: currentColor;
 				display: block;
 				margin-left: auto;
 				margin-top: 4px;
-				
+
 				^[-1]:hover:after,
 				^[0]--active &{
-					box-shadow: 0px 6px 0 currentColor, 0px 12px 0 currentColor;	
+					box-shadow: 0px 6px 0 currentColor, 0px 12px 0 currentColor;
 				}
 			}
 		}
-		&value{			
+		&value{
 			min-height: 20px;
 		}
 		&main{
 			position: absolute;
 			top: -16px;
-		    right: @top;		    
+		    right: @top;
 			background-color: $base_text;
-			box-shadow: $shadow;			
+			box-shadow: $shadow;
 		    padding-top: 60px;
 		    min-width: 200px;
 		    display: none;
-		    
+
 		    ^[0]--active &{
 		    	display: block;
 		    }
@@ -297,11 +391,11 @@ a{
 			display: block;
 			padding: 8px 16px;
 			text-align: right;
-			
+
 			&:hover{
 				background-color: $brand_text;
 				color: $color_white;
 			}
 		}
-	}	
+	}
 }
