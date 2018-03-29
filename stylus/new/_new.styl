@@ -19,6 +19,8 @@ $shadow = 2px 4px 8px rgba(0,0,0,.12)
 title(){
 	font-size: $size_lg;
 	line-height: 1.2;
+	opacity: .8;
+	margin-bottom: 16px;
 
 	+mq(gt-md){
 		font-size: $siz_md;
@@ -29,7 +31,7 @@ title(){
 
 caption(){
 	opacity: .8;
-	margin-top: 16px;
+	margin-top: 24px;
 	max-width: 360px;
 	max-width: 20vw;
 }
@@ -179,9 +181,6 @@ a{
 		&title{
 			title();
 		}
-		&alpha{
-			opacity: .8;
-		}
 		&caption{
 			caption();
 		}
@@ -198,7 +197,7 @@ a{
 			text-align: center;
 			margin-bottom: 80px;
 		}
-		&title{
+		&headline{
 			headline();
 
 			&:after{
@@ -225,7 +224,7 @@ a{
 			cards();
 			height: 100%;
 		}
-		&heading{
+		&title{
 			title();
 		}
 		&caption{
@@ -263,7 +262,7 @@ a{
 			}
 			&item{
 				padding-left: 32px;
-			}		
+			}
 		}
 	}
 	&__{
@@ -302,7 +301,7 @@ a{
 {$footer}{
 	padding: 40px 0;
 	color: $muted_text;
-	
+
 	// {$container}{
 	// 	max-width: 1200px;
 	// }

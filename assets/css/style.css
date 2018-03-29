@@ -317,6 +317,8 @@ a {
 .vd-banner__title {
   font-size: 24px;
   line-height: 1.2;
+  opacity: 0.8;
+  margin-bottom: 16px;
 }
 @media (min-width: 1000px) {
   .vd-banner__title {
@@ -325,12 +327,9 @@ a {
     font-weight: 200;
   }
 }
-.vd-banner__alpha {
-  opacity: 0.8;
-}
 .vd-banner__caption {
   opacity: 0.8;
-  margin-top: 16px;
+  margin-top: 24px;
   max-width: 360px;
   max-width: 20vw;
 }
@@ -353,22 +352,22 @@ a {
   text-align: center;
   margin-bottom: 80px;
 }
-.vd-section__title {
+.vd-section__headline {
   font-size: 80px;
   font-weight: 700;
 }
 @media (min-width: 1000px) {
-  .vd-section__title {
+  .vd-section__headline {
     font-size: 120px;
     line-height: 1.2;
   }
 }
 @media (min-width: 1400px) {
-  .vd-section__title {
+  .vd-section__headline {
     font-size: 7.2vw;
   }
 }
-.vd-section__title:after {
+.vd-section__headline:after {
   content: "";
   display: block;
   margin: 8px auto;
@@ -406,12 +405,14 @@ a {
     padding: 80px 120px;
   }
 }
-.vd-section__heading {
+.vd-section__title {
   font-size: 24px;
   line-height: 1.2;
+  opacity: 0.8;
+  margin-bottom: 16px;
 }
 @media (min-width: 1000px) {
-  .vd-section__heading {
+  .vd-section__title {
     font-size: 56px;
     font-size: 3.2vw;
     font-weight: 200;
@@ -419,7 +420,7 @@ a {
 }
 .vd-section__caption {
   opacity: 0.8;
-  margin-top: 16px;
+  margin-top: 24px;
   max-width: 360px;
   max-width: 20vw;
 }
