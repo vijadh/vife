@@ -222,6 +222,10 @@ a {
 a:hover {
   color: currentColor;
 }
+u {
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
 .vd-container {
   padding: 24px;
   margin: 0 auto;
