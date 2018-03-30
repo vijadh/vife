@@ -223,7 +223,6 @@ a:hover {
   color: currentColor;
 }
 .vd-container {
-  max-width: 1648px;
   padding: 24px;
   margin: 0 auto;
 }
@@ -329,6 +328,14 @@ a:hover {
     font-size: 56px;
     font-size: 3.2vw;
     font-weight: 200;
+  }
+}
+.vd-banner__disp {
+  font-size: 24px;
+}
+@media (min-width: 1400px) {
+  .vd-banner__disp {
+    font-size: 2vw;
   }
 }
 .vd-banner__caption {
@@ -468,12 +475,46 @@ a:hover {
   height: 2px;
   display: block;
 }
+.vd-section__item a {
+  color: currentColor;
+}
+.vd-section__paper:hover .vd-section__item a {
+  border-bottom: 1px dotted;
+}
 .vd-section__item--active {
   font-weight: 700;
   opacity: 1;
 }
 .vd-section__item--active:after {
   background-color: currentColor;
+}
+.vd-section__item--active a {
+  border-bottom: none !important;
+}
+.vd-venue__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.vd-venue__main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.vd-venue__gmap {
+  width: 100%;
+  height: 600px;
+}
+.vd-venue__paper {
+  padding: 40px 80px;
+  box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
+  position: relative;
+  background-color: #009946;
+}
+@media (min-width: 1000px) {
+  .vd-venue__paper {
+    padding: 80px 120px;
+  }
 }
 .vd-vipics {
   padding: 80px;
@@ -584,12 +625,12 @@ a:hover {
   top: 32px;
   z-index: 9000;
 }
-.vd-menu__label {
+.vd-menu__control {
   position: relative;
   z-index: 10;
   cursor: pointer;
 }
-.vd-menu__label:after {
+.vd-menu__control:after {
   content: "";
   width: 20px;
   height: 2px;
@@ -599,11 +640,11 @@ a:hover {
   margin-left: auto;
   margin-top: 4px;
 }
-.vd-menu__label:hover:after,
-.vd-menu--active .vd-menu__label:after {
+.vd-menu__control:hover:after,
+.vd-menu--active .vd-menu__control:after {
   box-shadow: 0px 6px 0 currentColor, 0px 12px 0 currentColor;
 }
-.vd-menu__value {
+.vd-menu__label {
   min-height: 20px;
 }
 .vd-menu__main {
@@ -630,8 +671,4 @@ a:hover {
 .vd-menu__item:hover {
   background-color: #009946;
   color: #fff;
-}
-.vd-gmap {
-  width: 100%;
-  height: 600px;
 }
