@@ -1,0 +1,67 @@
+{$footer}{
+	padding: 60px 0 120px;	
+	position: relative;
+	background-color: $color_base;
+	color: $color_white;
+	background-image: url(../images/wide/section-footer.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: cover;
+	clearfix();
+    
+    +mq(gt-md){
+        padding: 150px 0;
+        font-size: $size_sm;
+    }
+	&:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 19;
+        background-color: rgba($color_black, .5);
+        display: block;
+    }
+    & a{
+    	color: inherit;
+    }
+    &__{
+    	&row{
+    		display: flex;
+
+            +mq(md){
+                flex-direction: column-reverse;
+
+            }
+    	}
+    	&col{
+    		flex: 1;
+
+            +mq(md){
+                margin-top: 42px;
+            }
+    	}
+        &logo{
+            +mq(md){
+                width: 180px;
+            }
+        }   
+    }
+    & address{
+    	position: relative;
+        line-height: 1.8;
+        padding-left: 18px;
+
+    	&:before{
+    		content: "";
+    		display: inline-block;
+    		position: absolute;
+    		left: -3px;
+    		box(18px);
+    		background: url(../images/icon/map-white.svg) no-repeat center;
+    		background-size: contain;
+    	}
+    }
+}

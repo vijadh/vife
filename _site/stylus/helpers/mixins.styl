@@ -1,0 +1,129 @@
+//------------------------------------------------------------------------------
+//  clearfix
+//------------------------------------------------------------------------------
+clearfix() {
+    &:before,
+    &:after{
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+//------------------------------------------------------------------------------
+//  horizontal line
+//------------------------------------------------------------------------------
+hr(){
+    border-width: 0;
+    height: 1px;
+    background-color: $border_color_base;
+    overflow: visible;
+}
+
+//------------------------------------------------------------------------------
+//  box dimesion
+//------------------------------------------------------------------------------
+box($width, $height = $width){
+    width: $width;
+    height: $height;
+}
+
+//------------------------------------------------------------------------------
+//  triangle arrow
+//------------------------------------------------------------------------------
+//down
+triangle-down($size = 5px,$color = currentColor){
+    width: 0;
+    height: 0;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+}
+//up
+triangle-up($size = 5px,$color = currentColor){
+    width: 0;
+    height: 0;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+}
+//left
+triangle-left($size = 5px,$color = currentColor){
+    width: 0;
+    height: 0;
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+}
+triangle-right($size = 5px,$color = currentColor){
+    width: 0;
+    height: 0;
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+}
+//------------------------------------------------------------------------------
+//  Media Queries based on the viewport
+//------------------------------------------------------------------------------
+//mq = media query
+
+mq($point) {
+    $xs = 600px;
+    $sm = 800px;
+    $md = 1000px;
+    $lg = 1200px;
+    $xl = 1400px;
+    
+    if $point == xs {
+        @media (max-width: $xs - 1) {
+            {block}
+        }
+    }
+    else if $point == gt-xs {
+        @media (min-width: $xs) {
+            {block}
+        }
+    }
+    else if $point == sm {
+        @media (max-width: $sm - 1) {
+            {block}
+        }
+    }
+    else if $point == gt-sm {
+        @media (min-width: $sm) {
+            {block}
+        }
+    }
+    else if $point == md {
+        @media (max-width: $md - 1) {
+            {block}
+        }
+    }
+    else if $point == gt-md {
+        @media (min-width: $md) {
+            {block}
+        }
+    }
+    else if $point == lg {
+        @media (max-width: $lg - 1) {
+            {block}
+        }
+    }
+    else if $point == gt-lg {
+        @media (min-width: $lg) {
+            {block}
+        }
+    }
+    else if $point == xl {
+        @media (max-width: $xl - 1) {
+            {block}
+        }
+    }
+    else if $point == gt-xl {
+        @media (min-width: $xl) {
+            {block}
+        }
+    }
+}

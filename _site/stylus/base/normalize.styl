@@ -1,0 +1,105 @@
+// Change the content to margin, padding and border-box in all browsers (opinionated).
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline-width: 0!important;
+
+    &:before,
+    &:after{
+        box-sizing: border-box;
+    }
+}
+
+html{
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+body {
+    font-family: $base_family;
+    font-size: $base_size;
+    line-height: $base_lh;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    background-color: rgba(245, 222, 179, 0.16);
+    
+    +mq(md){
+        font-size: $size_md;
+    }
+}
+
+// HTML5 display definitions
+// ==========================================================================
+
+// Add the correct display in IE 9-.
+// 1. Add the correct display in Edge, IE, and Firefox.
+// 2. Add the correct display in IE.
+
+article,
+aside,
+details, // 1
+figcaption,
+figure,
+footer,
+header,
+main, // 2
+menu,
+nav,
+section,
+summary { // 1
+    display: block;
+}
+
+// Add the correct display in IE 9-.
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+}
+
+// Add the correct display in iOS 4-7.
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+// Add the correct vertical alignment in Chrome, Firefox, and Opera.
+
+progress {
+    vertical-align: baseline;
+}
+
+// Add the correct display in IE 10-.
+// 1. Add the correct display in IE.
+
+template, // 1
+[hidden] {
+    display: none;
+}
+
+// Embedded content
+// ==========================================================================
+
+// Remove the border on images inside links in IE 10-.
+
+img {
+    border-width: 0;
+}
+
+// Hide the overflow in IE.
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+iframe{
+    border-width: 0;
+}
+
+hr {
+    hr();
+}
