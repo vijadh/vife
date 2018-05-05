@@ -27,6 +27,16 @@ $shadow_dp5 = 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)
 //===============================================================
 // mixin
 //===============================================================
+clearfix(){
+	&:before,
+	&:after {
+	  content: "";
+	  display: table;
+	} 
+	&:after {
+	  clear: both;
+	}
+}
 title(){
 	font-size: $size_lg;
 	line-height: 1.2;
@@ -96,7 +106,7 @@ subtitle(){
 // selector
 //===============================================================
 $spacer 		= $pre+"spacer"
-$banner 		= $pre+"banner"
+$invite 		= $pre+"invite"
 $section 		= $pre+"section"
 $gallery 		= $pre+"gallery"
 $footer 		= $pre+"footer"
@@ -169,7 +179,7 @@ u{
 	}
 }
 
-{$banner}{
+{$invite}{
 	&__{
 		&block{
 			// padding: 40px 0;
@@ -224,6 +234,7 @@ u{
 }
 
 {$section}{
+	clearfix();
 
 	&__{
 		&header{
@@ -246,12 +257,16 @@ u{
 		}
 		&block{
 			display: flex;
+
+			& ~ &{
+				margin-top: 160px;
+			}
 		}
 		&main{
-			flex: 1;
+			flex: 1 0  50%;
 		}
 		&aside{
-			flex: 1;
+			flex: 1 0 50%;
 		}
 		&paper{
 			cards();
@@ -455,6 +470,8 @@ u{
 			}
 			&content{
 				margin-left: -200px;
+				overflow-x: auto;
+				padding-bottom: 24px;
 			}
 			&nav{
 				padding-left: 40px;
@@ -492,6 +509,9 @@ u{
 	}
 	&__{
 		&container{
+			
+		}
+		&figure{
 			background-color: $base_text;
 			// padding: 24px;
 			box-shadow: $shadow2;
@@ -499,14 +519,12 @@ u{
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
-		}
-		&figure{
 			overflow: hidden;
-			box(100%,100%);
 
 			img{
 				max-width: 100%;
 				height: auto;
+				position: relative;
 			}
 		}
 		&header{

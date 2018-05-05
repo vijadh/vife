@@ -1,12 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   outline-width: 0 !important;
 }
 *:before,
 *:after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 html {
   min-height: 100vh;
@@ -280,88 +282,98 @@ u {
     font-weight: 200;
   }
 }
-.vd-banner__thumb {
+.vd-invite__thumb {
   margin: 0 auto;
   text-align: center;
   line-height: 0;
   position: relative;
   z-index: 1;
   background-color: #212224;
-  box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
+          box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
 }
 @media (min-width: 1000px) {
-  .vd-banner__thumb {
+  .vd-invite__thumb {
     max-width: 50%;
     min-height: 360px;
   }
 }
-.vd-banner__thumb img {
+.vd-invite__thumb img {
   max-width: 100%;
   height: auto;
 }
-.vd-banner__main {
+.vd-invite__main {
   padding: 40px 80px;
-  box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
+  -webkit-box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
+          box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
   position: relative;
   background-color: #009946;
 }
 @media (min-width: 1000px) {
-  .vd-banner__main {
+  .vd-invite__main {
     padding: 80px 120px;
   }
 }
 @media (min-width: 1000px) {
-  .vd-banner__main {
+  .vd-invite__main {
     max-width: 50%;
     margin-top: -360px;
   }
 }
-.vd-banner__content {
+.vd-invite__content {
   position: relative;
   z-index: 11;
 }
-.vd-banner__title {
+.vd-invite__title {
   font-size: 24px;
   line-height: 1.2;
   opacity: 0.8;
   margin-bottom: 16px;
 }
 @media (min-width: 1000px) {
-  .vd-banner__title {
+  .vd-invite__title {
     font-size: 56px;
     font-size: 3.2vw;
     font-weight: 200;
   }
 }
-.vd-banner__disp {
+.vd-invite__disp {
   font-size: 24px;
   line-height: 1.2;
 }
 @media (min-width: 1400px) {
-  .vd-banner__disp {
+  .vd-invite__disp {
     font-size: 2vw;
   }
 }
-.vd-banner__caption {
+.vd-invite__caption {
   opacity: 0.8;
   margin-top: 24px;
   max-width: 360px;
   max-width: 20vw;
 }
-.vd-banner__mark {
+.vd-invite__mark {
   font-size: 80px;
   font-weight: 700;
 }
 @media (min-width: 1000px) {
-  .vd-banner__mark {
+  .vd-invite__mark {
     font-size: 120px;
     line-height: 1;
   }
 }
 @media (min-width: 1400px) {
-  .vd-banner__mark {
+  .vd-invite__mark {
     font-size: 7.2vw;
   }
+}
+.vd-section:before,
+.vd-section:after {
+  content: "";
+  display: table;
+}
+.vd-section:after {
+  clear: both;
 }
 .vd-section__header {
   text-align: center;
@@ -398,19 +410,23 @@ u {
   display: -ms-flexbox;
   display: flex;
 }
+.vd-section__block ~ .vd-section__block {
+  margin-top: 160px;
+}
 .vd-section__main {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
 }
 .vd-section__aside {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
 }
 .vd-section__paper {
   padding: 40px 80px;
-  box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
+  -webkit-box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
+          box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
   position: relative;
   background-color: #009946;
   height: 100%;
@@ -528,7 +544,8 @@ u {
   width: 480px;
   height: 640px;
   overflow: hidden;
-  box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
+          box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
 }
 .vd-couple__thumb img {
   max-width: 100%;
@@ -616,7 +633,8 @@ u {
   width: 240px;
   height: 135px;
   overflow: hidden;
-  box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
+          box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
 }
 .vd-venue__figure img {
   max-width: 100%;
@@ -629,11 +647,13 @@ u {
   position: absolute;
   top: 0;
   z-index: 10;
-  box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
+          box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
 }
 .vd-venue__paper {
   padding: 40px 80px;
-  box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
+  -webkit-box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
+          box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
   position: relative;
   background-color: #009946;
 }
@@ -685,6 +705,8 @@ u {
 }
 .vd-vipics__content {
   margin-left: -200px;
+  overflow-x: auto;
+  padding-bottom: 24px;
 }
 .vd-vipics__nav {
   padding-left: 40px;
@@ -700,7 +722,8 @@ u {
   text-align: center;
   background-color: #009946;
   margin-left: 8px;
-  box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
+  -webkit-box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
+          box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
 }
 .vd-vipics__title {
   color: #009946;
@@ -724,23 +747,21 @@ u {
 .vd-vipics__item {
   padding-left: 32px;
 }
-.vd-vipic__container {
+.vd-vipic__figure {
   background-color: #212224;
-  box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
+          box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
   width: 240px;
   height: 135px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-.vd-vipic__figure {
   overflow: hidden;
-  width: 100%;
-  height: 100%;
 }
 .vd-vipic__figure img {
   max-width: 100%;
   height: auto;
+  position: relative;
 }
 .vd-vipic__header {
   display: block;
@@ -766,12 +787,14 @@ u {
 }
 .vd-gallerys__item:nth-child(2n) .vd-gallery {
   background-color: #212224;
-  box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
+          box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
 }
 .vd-gallery {
   padding: 24px;
   background-color: #009946;
-  box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
+  -webkit-box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
+          box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
   color: #fff;
   height: 100%;
   text-align: center;
@@ -844,7 +867,8 @@ u {
 }
 .vd-menu__control:hover:after,
 .vd-menu--active .vd-menu__control:after {
-  box-shadow: 0px 6px 0 currentColor, 0px 12px 0 currentColor;
+  -webkit-box-shadow: 0px 6px 0 currentColor, 0px 12px 0 currentColor;
+          box-shadow: 0px 6px 0 currentColor, 0px 12px 0 currentColor;
 }
 .vd-menu__label {
   min-height: 20px;
@@ -854,7 +878,8 @@ u {
   top: -16px;
   right: -16px;
   background-color: #212224;
-  box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
+          box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
   padding-top: 80px;
   min-width: 200px;
   display: none;
