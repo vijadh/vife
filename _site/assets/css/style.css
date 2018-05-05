@@ -747,7 +747,7 @@ u {
 .vd-vipics__item {
   padding-left: 32px;
 }
-.vd-vipic__figure {
+.vd-vipic__thumb {
   background-color: #212224;
   -webkit-box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
           box-shadow: 12px 16px 20px rgba(0,0,0,0.24);
@@ -758,13 +758,16 @@ u {
   background-repeat: no-repeat;
   overflow: hidden;
 }
-.vd-vipic__figure img {
+.vd-vipic__thumb img {
   max-width: 100%;
   height: auto;
   position: relative;
 }
 .vd-vipic__header {
   display: block;
+}
+.vd-vipic__title {
+  text-transform: capitalize;
 }
 .vd-gallerys {
   display: -webkit-box;
