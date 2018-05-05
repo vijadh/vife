@@ -22,9 +22,11 @@
             </div>
             <div class="vd-section__aside">
                  <div class="vd-vipics">
+                    {% directory path: "{{ dataVP.path }}" exclude: private %}
+                    {% if forloop.first %}
                     <div class="vd-vipics__block">
                         <div class="vd-vipics__header">
-                            <div class="vd-vipics__title">Pictures (13)</div>
+                            <div class="vd-vipics__title">Pictures ({{ forloop.length }})</div>
                             <div class="vd-vipics__nav">
                                 <div class="vd-vipics__prev"><</div>
                                 <div class="vd-vipics__next">></div>
@@ -32,7 +34,7 @@
                         </div>
                         <div class="vd-vipics__content">
                             <div class="vd-vipics__list">
-                                {% directory path: "{{ dataVP.path }}" exclude: private %}
+                    {% endif %}
                                 <div class="vd-vipics__item">
                                     <div class="vd-vipic">
                                         <div class="vd-vipic__container">
@@ -43,14 +45,16 @@
                                                     <img src="{{ file.url }}" alt="{{ file.slug }}"/>
                                                 {% endif %}
                                             </div>
-                                            <div class="vd-vipic__title">{{ file.slug | capitalize | replace: '-', ' ' | remove: 'center'}}</div>
+                                            <div class="vd-vipic__title">{{ file.slug | capitalize | replace: '-', ' ' | remove: 'center' | remove: 0 | remove: 1 | remove: 2 | remove: 3 | remove: 4 | remove: 5 | remove: 6 | remove: 7 | remove: 8 | remove: 9 }}</div>
                                         </div>
                                     </div>
-                                </div>
-                                {% enddirectory %}
+                                </div>                                 
+                    {% if forloop.last %}                               
                             </div>
                         </div>
                     </div>
+                    {% endif %}
+                    {% enddirectory %}
 
                     <div class="vd-vipics__block">
                         <div class="vd-vipics__header">
@@ -61,7 +65,7 @@
                             </div>
                         </div>
                         <div class="vd-vipics__content">
-                            <div class="vd-vipics__list">
+                            <!-- <div class="vd-vipics__list">
                                 <div class="vd-vipics__item">
                                     <div class="vd-vipic">
                                         <div class="vd-vipic__container">
@@ -86,7 +90,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
