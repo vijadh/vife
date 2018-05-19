@@ -1,6 +1,8 @@
 name: Vijadh
 
 
+baseurl: "/"
+
 production_url : http://vijadh.com/
 #REFERENCE
 #https://github.com/noamross/jekyll-site/blob/master/_config.yml
