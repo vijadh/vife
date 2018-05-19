@@ -1,4 +1,4 @@
-name: Vijadh
+# name: Vijadh
 
 
 baseurl: "/"
@@ -8,3 +8,5 @@ production_url : http://vijadh.com/
 #https://github.com/noamross/jekyll-site/blob/master/_config.yml
 
 
+# plugins:
+   # - directory_tag
