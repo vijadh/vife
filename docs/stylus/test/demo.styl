@@ -1,0 +1,252 @@
+
+border-radius(n){
+  -webkit-border-radius n
+  -moz-border-radius n
+  border-radius n
+}
+form input[type=button]{
+  border-radius(5px)
+}
+
+//variable
+$blue = orange;
+//$colo ?= #ccc;
+//$color = $color is defined ? $color : #ccc
+.div{
+	background: $blue;
+	color: @background;
+	width: 200px;
+	margin-left: (@width/2);
+}
+
+//mixin
+demo(val){
+	color: val;
+}
+.foo{
+	demo(red);
+}
+
+mq($point) {
+    $xs = 500px;
+    $sm = 768px;
+    $md = 992px;
+    $lg = 1200px;
+    $xl = 1480px;
+
+    if $point == xs {
+        @media (max-width: $xs - 1) {
+            {block}
+        }
+    }
+    else if $point == gt-xs {
+        @media (min-width: $xs) {
+            {block}
+        }
+    }
+    else if $point == sm {
+        @media (max-width: $sm - 1) {
+            {block}
+        }
+    }
+    else if $point == gt-sm {
+        @media (min-width: $sm) {
+            {block}
+        }
+    }
+    else if $point == md {
+        @media (max-width: $md - 1) {
+            {block}
+        }
+    }
+    else if $point == gt-md {
+        @media (min-width: $md) {
+            {block}
+        }
+    }
+    else if $point == lg {
+        @media (max-width: $lg - 1) {
+            {block}
+        }
+    }
+    else if $point == gt-lg {
+        @media (min-width: $lg) {
+            {block}
+        }
+    }
+}
+
+.div{
+	+mq(sm){
+		color: orange;
+	}
+}
+
+
+overflow(value){
+  if value == ellipsis{
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+  }
+  else{
+    overflow: value;
+  }
+}
+
+.bar{
+  overflow: ellipsis;
+}
+
+
+//placeholder
+$foo{
+  width: 100px;
+}
+
+$bar{
+  height: 100px;
+}
+
+.baz{
+  @extend $foo;
+}
+
+//loop
+colors = {
+  "green": #38ab0d
+  red: #ab130b
+  blue: #099aab
+}
+
+for name, color in colors
+  .btn-{name}
+    background: mix(color, white, 60%)
+    &:hover
+      background: color
+
+
+
+$selectors = {
+    "mar": "margin",
+    "pad": "padding"
+}
+$sides = {
+    "u": "",
+    "t": "-top",
+    "r": "-right",
+    "b": "-bottom",
+    "l": "-left",
+    "x": "",    // left and right
+    "y": ""     // top and bottom
+}
+$sizes = {
+    "xl": 60px,
+    "lg": 45px,
+    "md": 36px,
+    "st": 24px,
+    "sm": 12px,
+    "xs": 6px,
+    "no": 0
+}
+
+for $selector, $prop in $selectors{
+    .me-{$selector}--{
+        for $side,$prop-side in $sides{
+            &{$side}-{
+                for $size,$val in $sizes{
+                    &{$size}{
+
+                        if ($side != x) and ($side != y){
+                            {$prop}{$prop-side}: $val;
+                        } else if $side == x{
+                            {$prop}-left: $val;
+                            {$prop}-right: $val;
+                        } else if $side == y{
+                            {$prop}-top: $val;
+                            {$prop}-bottom: $val;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+// for $selector,$prop in {
+//     "mar":"margin",
+//     "pad":"padding"}{
+
+//     //selector
+//     .me-{$selector}--{
+//         for $side,$prop-side in {
+//             "u":"",
+//             "t":"-top",
+//             "r":"-right",
+//             "b":"-bottom",
+//             "l":"-left",
+//             "x":"",
+//             "y":""}{
+
+//             //selector
+//             &{$side}-{
+//                 //$val - don't change the value it will affect many places
+//                 for $size,$val in {
+//                     "xl":60px,
+//                     "lg":45px,
+//                     "md":36px,
+//                     "st":24px,
+//                     "sm":12px,
+//                     "xs":6px,
+//                     "no":0}{
+
+//                     //selector
+//                     &{$size}{
+
+//                         if ($side != x) and ($side != y){
+//                             {$prop}{$prop-side}: $val;
+//                         } else if $side == x{
+//                             {$prop}-left: $val;
+//                             {$prop}-right: $val;
+//                         } else if $side == y{
+//                             {$prop}-top: $val;
+//                             {$prop}-bottom: $val;
+//                         }
+
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+
+$green = #38ab0b
+$red = #ab130b
+
+colors = 'green' $green 'white',
+         'red' $red 'black'
+
+for value in colors
+  .btn-{value[0]}
+    background: value[1]
+    color: value[2]
+
+$headings = 'h1' $size_h1 500 12px,
+            'h2' $size_h2 500 12px,
+            'h3' $size_h3 300 12px,
+            'h4' $size_h4 300 9px,
+            'h5' $size_h5 400 6px,
+            'h6' $size_h6 400 6px
+
+
+for $value in $headings {
+    {$value[0]}{
+        font-size: $value[1];
+        font-weight: $value[2];
+        margin-bottom: $value[3];
+        margin-top: 0;
+    }
+}
