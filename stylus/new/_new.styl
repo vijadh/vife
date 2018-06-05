@@ -89,9 +89,9 @@ mark(){
 	font-size: $siz_lg;
 	font-weight: $weight_bolder;
 	line-height: 1;
-	
+
 	+mq(gt-md){
-		font-size: $siz_xl;		
+		font-size: $siz_xl;
 	}
 	+mq(gt-xl){
 		font-size: 7.2vw;
@@ -267,7 +267,7 @@ u{
 		&block{
 			display: flex;
 			overflow: hidden;
-			
+
 			& ~ &{
 				margin-top: 160px;
 			}
@@ -569,6 +569,25 @@ u{
 	}
 }
 
+{$pre}rsvp{
+	&__{
+		&btn{
+			max-width: 300px;
+		    margin: auto;
+		    display: block;
+		    text-align: center;
+		    font-size: 60px;
+		    border-radius: 0px;
+		    padding: 0 40px;
+		    background-color: $base_text;
+		    box-shadow: $shadow;
+		    
+		    &:hover{
+		    	background-color: $brand_text;
+		    }
+		}
+	}
+}
 {$gallery}{
 	&s{
 		display: flex;

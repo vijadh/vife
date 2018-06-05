@@ -801,6 +801,21 @@ u {
 .vd-vipic__title {
   text-transform: capitalize;
 }
+.vd-rsvp__btn {
+  max-width: 300px;
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 60px;
+  border-radius: 0px;
+  padding: 0 40px;
+  background-color: #212224;
+  -webkit-box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
+          box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
+}
+.vd-rsvp__btn:hover {
+  background-color: #009946;
+}
 .vd-gallerys {
   display: -webkit-box;
   display: -ms-flexbox;
