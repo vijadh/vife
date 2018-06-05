@@ -3,7 +3,7 @@
 // variable
 //===============================================================
 //font-size
-$siz_xl = 120px
+$siz_xl = 110px
 $siz_lg = 80px
 $siz_md = 56px
 $siz_st = 48px
@@ -15,7 +15,7 @@ $shadow = 4px 8px 8px rgba(0,0,0,0.32)
 $shadow2 = 12px 16px 20px rgba(0,0,0,0.24)
 
 $shadow_dp1 = 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
-    
+
 $shadow_dp2 = 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
 
 $shadow_dp3 = 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
@@ -32,7 +32,7 @@ clearfix(){
 	&:after {
 	  content: "";
 	  display: table;
-	} 
+	}
 	&:after {
 	  clear: both;
 	}
@@ -40,7 +40,7 @@ clearfix(){
 title(){
 	font-size: $size_lg;
 	line-height: 1.2;
-	opacity: .8;
+	// opacity: .8;
 	margin-bottom: 16px;
 
 	+mq(gt-md){
@@ -54,7 +54,10 @@ caption(){
 	opacity: .8;
 	margin-top: 24px;
 	max-width: 360px;
-	max-width: 20vw;
+
+	+mq(gt-xl){
+		max-width: 20vw;
+	}
 }
 
 headline(){
@@ -85,10 +88,10 @@ cards(){
 mark(){
 	font-size: $siz_lg;
 	font-weight: $weight_bolder;
-
+	line-height: 1;
+	
 	+mq(gt-md){
-		font-size: $siz_xl;
-		line-height: 1;
+		font-size: $siz_xl;		
 	}
 	+mq(gt-xl){
 		font-size: 7.2vw;
@@ -176,10 +179,15 @@ u{
 			title();
 			margin: 16px 0;
 		}
+		&caption{
+			caption();
+			margin: 40px auto 0;
+		}
 	}
 }
 
 {$invite}{
+	font-weight: $wit_light;
 	&__{
 		&block{
 			// padding: 40px 0;
@@ -220,6 +228,7 @@ u{
 		}
 		&title{
 			title();
+			margin-bottom: 0;
 		}
 		&disp{
 			subtitle();
@@ -257,16 +266,34 @@ u{
 		}
 		&block{
 			display: flex;
-
+			overflow: hidden;
+			
 			& ~ &{
 				margin-top: 160px;
 			}
+			// #vipic &{
+			// 	display: block;
+			// 	float: left;
+			// 	width: 100%;
+			// }
 		}
 		&main{
 			flex: 1 0  50%;
+
+			// #vipic &{
+			// 	display: block;
+			// 	float: left;
+			// 	width: 50%;
+			// }
 		}
 		&aside{
 			flex: 1 0 50%;
+
+			// #vipic &{
+			// 	display: block;
+			// 	float: left;
+			// 	width: 50%;
+			// }
 		}
 		&paper{
 			cards();
@@ -370,10 +397,10 @@ u{
 			max-width: 480px;
 			padding-left: 40px;
 			padding-right: @padding-left;
-			
+
 			{$groom} &{
 				// display: flex;
-				// flex-direction: column-reverse;    
+				// flex-direction: column-reverse;
 			}
 		}
 		&list{
@@ -470,6 +497,7 @@ u{
 			}
 			&content{
 				margin-left: -200px;
+				margin-right: -80px;
 				overflow-x: auto;
 				padding-bottom: 24px;
 			}
@@ -485,6 +513,7 @@ u{
 				background-color: $brand_text;
 				margin-left: 8px;
 				box-shadow: $shadow;
+				cursor: pointer;
 			}
 			&prev{
 
@@ -500,16 +529,20 @@ u{
 			}
 			&list{
 				display: flex;
-				margin-left: -32px;
+				// margin-left: -32px;
 			}
 			&item{
-				padding-left: 32px;
+				padding-right: 32px;
+
+				&:last-child{
+					padding-right: 80px;
+				}
 			}
 		}
 	}
 	&__{
 		&container{
-			
+
 		}
 		&thumb{
 			background-color: $base_text;
@@ -551,7 +584,7 @@ u{
 			&:nth-child(2n){
 				margin-top: -32px;
 				margin-bottom: @margin-top;
-								
+
 				& ^[0]{
 					background-color: $base_text;
 					box-shadow: $shadow2;

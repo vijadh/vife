@@ -257,7 +257,7 @@ u {
 @media (min-width: 1000px) {
   .vd-header__groom,
   .vd-header__bride {
-    font-size: 120px;
+    font-size: 110px;
     line-height: 1;
   }
 }
@@ -271,7 +271,6 @@ u {
   color: #009946;
   font-size: 24px;
   line-height: 1.2;
-  opacity: 0.8;
   margin-bottom: 16px;
   margin: 16px 0;
 }
@@ -281,6 +280,20 @@ u {
     font-size: 3.2vw;
     font-weight: 200;
   }
+}
+.vd-header__caption {
+  opacity: 0.8;
+  margin-top: 24px;
+  max-width: 360px;
+  margin: 40px auto 0;
+}
+@media (min-width: 1400px) {
+  .vd-header__caption {
+    max-width: 20vw;
+  }
+}
+.vd-invite {
+  font-weight: 200;
 }
 .vd-invite__thumb {
   margin: 0 auto;
@@ -327,8 +340,8 @@ u {
 .vd-invite__title {
   font-size: 24px;
   line-height: 1.2;
-  opacity: 0.8;
   margin-bottom: 16px;
+  margin-bottom: 0;
 }
 @media (min-width: 1000px) {
   .vd-invite__title {
@@ -350,16 +363,20 @@ u {
   opacity: 0.8;
   margin-top: 24px;
   max-width: 360px;
-  max-width: 20vw;
+}
+@media (min-width: 1400px) {
+  .vd-invite__caption {
+    max-width: 20vw;
+  }
 }
 .vd-invite__mark {
   font-size: 80px;
   font-weight: 700;
+  line-height: 1;
 }
 @media (min-width: 1000px) {
   .vd-invite__mark {
-    font-size: 120px;
-    line-height: 1;
+    font-size: 110px;
   }
 }
 @media (min-width: 1400px) {
@@ -385,7 +402,7 @@ u {
 }
 @media (min-width: 1000px) {
   .vd-section__headline {
-    font-size: 120px;
+    font-size: 110px;
     line-height: 1;
   }
 }
@@ -409,6 +426,7 @@ u {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
 }
 .vd-section__block ~ .vd-section__block {
   margin-top: 160px;
@@ -439,7 +457,6 @@ u {
 .vd-section__title {
   font-size: 24px;
   line-height: 1.2;
-  opacity: 0.8;
   margin-bottom: 16px;
 }
 @media (min-width: 1000px) {
@@ -453,16 +470,20 @@ u {
   opacity: 0.8;
   margin-top: 24px;
   max-width: 360px;
-  max-width: 20vw;
+}
+@media (min-width: 1400px) {
+  .vd-section__caption {
+    max-width: 20vw;
+  }
 }
 .vd-section__mark {
   font-size: 80px;
   font-weight: 700;
+  line-height: 1;
 }
 @media (min-width: 1000px) {
   .vd-section__mark {
-    font-size: 120px;
-    line-height: 1;
+    font-size: 110px;
   }
 }
 @media (min-width: 1400px) {
@@ -560,7 +581,7 @@ u {
 }
 @media (min-width: 1000px) {
   .vd-couple__title {
-    font-size: 120px;
+    font-size: 110px;
     line-height: 1;
   }
 }
@@ -586,7 +607,11 @@ u {
   opacity: 0.8;
   margin-top: 24px;
   max-width: 360px;
-  max-width: 20vw;
+}
+@media (min-width: 1400px) {
+  .vd-couple__list {
+    max-width: 20vw;
+  }
 }
 .vd-couple__list li {
   margin-bottom: 16px;
@@ -670,7 +695,6 @@ u {
 .vd-venue__title {
   font-size: 24px;
   line-height: 1.2;
-  opacity: 0.8;
   margin-bottom: 16px;
 }
 @media (min-width: 1000px) {
@@ -684,7 +708,11 @@ u {
   opacity: 0.8;
   margin-top: 24px;
   max-width: 360px;
-  max-width: 20vw;
+}
+@media (min-width: 1400px) {
+  .vd-venue__caption {
+    max-width: 20vw;
+  }
 }
 .vd-vipics {
   padding: 80px;
@@ -705,6 +733,7 @@ u {
 }
 .vd-vipics__content {
   margin-left: -200px;
+  margin-right: -80px;
   overflow-x: auto;
   padding-bottom: 24px;
 }
@@ -724,6 +753,7 @@ u {
   margin-left: 8px;
   -webkit-box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
           box-shadow: 4px 8px 8px rgba(0,0,0,0.32);
+  cursor: pointer;
 }
 .vd-vipics__title {
   color: #009946;
@@ -742,10 +772,12 @@ u {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: -32px;
 }
 .vd-vipics__item {
-  padding-left: 32px;
+  padding-right: 32px;
+}
+.vd-vipics__item:last-child {
+  padding-right: 80px;
 }
 .vd-vipic__thumb {
   background-color: #212224;

@@ -24,7 +24,7 @@
                  <div class="vd-vipics">
                     {% directory path: "{{ dataVP.pic }}"%}
                     {% if forloop.first %}
-                    <div class="vd-vipics__block">
+                    <div class="vd-vipics__block" vipic-slider-parent="true">
                         <div class="vd-vipics__header">
                             <div class="vd-vipics__title">Pictures ({{ forloop.length }})</div>
                             <div class="vd-vipics__nav">
@@ -32,8 +32,8 @@
                                 <div class="vd-vipics__next">></div>
                             </div>
                         </div>
-                        <div class="vd-vipics__content">
-                            <div class="vd-vipics__list">
+                        <div class="vd-vipics__content" vipic-slider="true">
+                            <div class="vd-vipics__list" vipic-slider-child="true">
                     {% endif %}
                                 <div class="vd-vipics__item">
                                     <div class="vd-vipic">

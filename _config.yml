@@ -1,17 +1,18 @@
-# name: Vijadh
+#REFERENCE
+#https://github.com/noamross/jekyll-site/blob/master/_config.yml
 
+
+# name: Vijadh
 
 baseurl: "/"
 
 destination: ./docs
 
+environment: development
+
 production_url : http://vijadh.com/
-#REFERENCE
-#https://github.com/noamross/jekyll-site/blob/master/_config.yml
 
+plugins_dir: ./_plugins 
 
-# plugins:
-   # - directory_tag
-
-
-   
+#plugins:
+#  - directory_tag
