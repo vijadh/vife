@@ -14,5 +14,7 @@ production_url : http://vijadh.com/
 
 plugins_dir: ./_plugins 
 
+version: "?v=1.0"
+
 #plugins:
 #  - directory_tag
