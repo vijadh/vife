@@ -12,9 +12,9 @@ environment: development
 
 production_url : http://vijadh.com/
 
-plugins_dir: ./_plugins 
+plugins_dir: ./_plugins
 
-version: "?v=1.0"
+version: "?v=1.1"
 
 #plugins:
 #  - directory_tag
