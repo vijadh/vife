@@ -447,6 +447,11 @@ u {
   text-align: center;
   margin-bottom: 80px;
 }
+@media (max-width: 799px) {
+  .vd-section__header {
+    margin-bottom: 40px;
+  }
+}
 .vd-section__headline {
   font-size: 80px;
   font-weight: 700;
