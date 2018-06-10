@@ -249,6 +249,11 @@ u {
     padding: 80px 40px;
   }
 }
+@media (max-width: 799px) {
+  .vd-header {
+    padding-top: 64px;
+  }
+}
 .vd-header__groom,
 .vd-header__bride {
   font-size: 80px;
@@ -267,6 +272,12 @@ u {
     font-size: 7.2vw;
   }
 }
+@media (max-width: 799px) {
+  .vd-header__groom,
+  .vd-header__bride {
+    font-size: 36px;
+  }
+}
 .vd-header__weds {
   color: #009946;
   font-size: 24px;
@@ -281,6 +292,16 @@ u {
     font-weight: 200;
   }
 }
+@media (max-width: 799px) {
+  .vd-header__weds {
+    font-size: 24px;
+  }
+}
+@media (max-width: 799px) {
+  .vd-header__weds {
+    margin: 0;
+  }
+}
 .vd-header__caption {
   opacity: 0.8;
   margin-top: 24px;
@@ -290,6 +311,11 @@ u {
 @media (min-width: 1400px) {
   .vd-header__caption {
     max-width: 20vw;
+  }
+}
+@media (max-width: 799px) {
+  .vd-header__caption {
+    font-size: 16px;
   }
 }
 .vd-invite {
@@ -327,6 +353,11 @@ u {
     padding: 80px 120px;
   }
 }
+@media (max-width: 799px) {
+  .vd-invite__main {
+    padding: 40px 32px;
+  }
+}
 @media (min-width: 1000px) {
   .vd-invite__main {
     max-width: 50%;
@@ -350,6 +381,11 @@ u {
     font-weight: 200;
   }
 }
+@media (max-width: 799px) {
+  .vd-invite__title {
+    font-size: 24px;
+  }
+}
 .vd-invite__disp {
   font-size: 24px;
   line-height: 1.2;
@@ -357,6 +393,11 @@ u {
 @media (min-width: 1400px) {
   .vd-invite__disp {
     font-size: 2vw;
+  }
+}
+@media (max-width: 799px) {
+  .vd-invite__disp {
+    font-size: 20px;
   }
 }
 .vd-invite__caption {
@@ -367,6 +408,11 @@ u {
 @media (min-width: 1400px) {
   .vd-invite__caption {
     max-width: 20vw;
+  }
+}
+@media (max-width: 799px) {
+  .vd-invite__caption {
+    font-size: 16px;
   }
 }
 .vd-invite__mark {
@@ -382,6 +428,11 @@ u {
 @media (min-width: 1400px) {
   .vd-invite__mark {
     font-size: 7.2vw;
+  }
+}
+@media (max-width: 799px) {
+  .vd-invite__mark {
+    font-size: 44px;
   }
 }
 .vd-section:before,
@@ -409,6 +460,11 @@ u {
 @media (min-width: 1400px) {
   .vd-section__headline {
     font-size: 7.2vw;
+  }
+}
+@media (max-width: 799px) {
+  .vd-section__headline {
+    font-size: 36px;
   }
 }
 .vd-section__headline:after {
@@ -454,6 +510,11 @@ u {
     padding: 80px 120px;
   }
 }
+@media (max-width: 799px) {
+  .vd-section__paper {
+    padding: 40px 32px;
+  }
+}
 .vd-section__title {
   font-size: 24px;
   line-height: 1.2;
@@ -466,6 +527,11 @@ u {
     font-weight: 200;
   }
 }
+@media (max-width: 799px) {
+  .vd-section__title {
+    font-size: 24px;
+  }
+}
 .vd-section__caption {
   opacity: 0.8;
   margin-top: 24px;
@@ -474,6 +540,11 @@ u {
 @media (min-width: 1400px) {
   .vd-section__caption {
     max-width: 20vw;
+  }
+}
+@media (max-width: 799px) {
+  .vd-section__caption {
+    font-size: 16px;
   }
 }
 .vd-section__mark {
@@ -489,6 +560,11 @@ u {
 @media (min-width: 1400px) {
   .vd-section__mark {
     font-size: 7.2vw;
+  }
+}
+@media (max-width: 799px) {
+  .vd-section__mark {
+    font-size: 44px;
   }
 }
 .vd-section__list {
@@ -534,6 +610,11 @@ u {
 }
 .vd-couple {
   padding: 120px 40px;
+}
+@media (max-width: 799px) {
+  .vd-couple {
+    display: none;
+  }
 }
 .vd-couple__container {
   display: -webkit-box;
@@ -590,6 +671,11 @@ u {
     font-size: 7.2vw;
   }
 }
+@media (max-width: 799px) {
+  .vd-couple__title {
+    font-size: 36px;
+  }
+}
 .vd-bride .vd-couple__title {
   white-space: nowrap;
 }
@@ -613,6 +699,11 @@ u {
     max-width: 20vw;
   }
 }
+@media (max-width: 799px) {
+  .vd-couple__list {
+    font-size: 16px;
+  }
+}
 .vd-couple__list li {
   margin-bottom: 16px;
 }
@@ -621,10 +712,20 @@ u {
   display: -ms-flexbox;
   display: flex;
 }
+@media (max-width: 799px) {
+  .vd-venue__block {
+    display: block;
+  }
+}
 .vd-venue__main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+@media (max-width: 799px) {
+  .vd-venue__main {
+    display: none;
+  }
 }
 .vd-venue__aside {
   -webkit-box-flex: 1;
@@ -687,6 +788,11 @@ u {
     padding: 80px 120px;
   }
 }
+@media (max-width: 799px) {
+  .vd-venue__paper {
+    padding: 40px 32px;
+  }
+}
 @media (min-width: 1000px) {
   .vd-venue__paper {
     padding-left: 320px;
@@ -704,6 +810,11 @@ u {
     font-weight: 200;
   }
 }
+@media (max-width: 799px) {
+  .vd-venue__title {
+    font-size: 24px;
+  }
+}
 .vd-venue__caption {
   opacity: 0.8;
   margin-top: 24px;
@@ -712,6 +823,11 @@ u {
 @media (min-width: 1400px) {
   .vd-venue__caption {
     max-width: 20vw;
+  }
+}
+@media (max-width: 799px) {
+  .vd-venue__caption {
+    font-size: 16px;
   }
 }
 .vd-vipics {
@@ -765,6 +881,11 @@ u {
     font-size: 2vw;
   }
 }
+@media (max-width: 799px) {
+  .vd-vipics__title {
+    font-size: 20px;
+  }
+}
 .vd-vipics__block ~ .vd-vipics__block {
   margin-top: 80px;
 }
@@ -816,6 +937,11 @@ u {
 .vd-rsvp__btn:hover {
   background-color: #009946;
 }
+@media (max-width: 799px) {
+  .vd-rsvp__btn {
+    font-size: 40px;
+  }
+}
 .vd-gallerys {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -863,6 +989,11 @@ u {
     font-size: 2vw;
   }
 }
+@media (max-width: 799px) {
+  .vd-gallery__title {
+    font-size: 20px;
+  }
+}
 .vd-footer {
   padding: 40px 0;
   color: #666;
@@ -875,6 +1006,11 @@ u {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media (max-width: 799px) {
+  .vd-footer__nav {
+    display: none;
+  }
+}
 .vd-footer__item {
   color: #666;
 }
@@ -883,6 +1019,12 @@ u {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media (max-width: 799px) {
+  .vd-footer__brand {
+    display: block;
+    max-width: none;
+  }
 }
 .vd-footer__logo {
   color: #009946;
@@ -952,4 +1094,9 @@ u {
 }
 #venue {
   padding-bottom: 240px;
+}
+@media (max-width: 799px) {
+  #venue {
+    padding-bottom: 0;
+  }
 }

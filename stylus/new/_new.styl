@@ -48,6 +48,9 @@ title(){
 		font-size: 3.2vw;
 		font-weight: $wit_light;
 	}
+	+mq(sm){
+		font-size: 24px;
+	}
 }
 
 caption(){
@@ -57,6 +60,9 @@ caption(){
 
 	+mq(gt-xl){
 		max-width: 20vw;
+	}
+	+mq(sm){
+		font-size: 16px;
 	}
 }
 
@@ -71,6 +77,9 @@ headline(){
 	+mq(gt-xl){
 		font-size: 7.2vw;
 	}
+	+mq(sm){
+		font-size: 36px;
+	}
 }
 
 cards(){
@@ -82,6 +91,9 @@ cards(){
 	+mq(gt-md){
 		// max-width: 50%;
 		padding: 80px 120px;
+	}
+	+mq(sm){
+		padding: 40px 32px;
 	}
 }
 
@@ -96,6 +108,9 @@ mark(){
 	+mq(gt-xl){
 		font-size: 7.2vw;
 	}
+	+mq(sm){
+		font-size: 44px;
+	}
 }
 subtitle(){
 	font-size: $size_lg;
@@ -104,6 +119,9 @@ subtitle(){
 	+mq(gt-xl){
 		font-size: 2vw;
 	}
+	+mq(sm){
+		font-size: 20px;
+	}	
 }
 //===============================================================
 // selector
@@ -169,6 +187,9 @@ u{
 	+mq(gt-md){
 		padding: 80px 40px;
 	}
+	+mq(sm){
+		padding-top: 64px;
+	}
 	&__{
 		&groom,
 		&bride{
@@ -178,6 +199,10 @@ u{
 			color: $brand_text;
 			title();
 			margin: 16px 0;
+
+			+mq(sm){
+				margin: 0;
+			}
 		}
 		&caption{
 			caption();
@@ -351,6 +376,9 @@ u{
 {$couple}{
 	padding: 120px 40px;
 
+	+mq(sm){
+		display: none;
+	}
 	&__{
 		&container{
 			display: flex;
@@ -418,9 +446,17 @@ u{
 	&__{
 		&block{
 			display: flex;
+			
+			+mq(sm){
+				display: block;
+			}
 		}
 		&main{
 			flex: 1;
+			
+			+mq(sm){
+				display: none;
+			}
 		}
 		&aside{
 			flex: 1;
@@ -581,10 +617,13 @@ u{
 		    padding: 0 40px;
 		    background-color: $base_text;
 		    box-shadow: $shadow;
-		    
+
 		    &:hover{
 		    	background-color: $brand_text;
 		    }
+		    +mq(sm){
+				font-size: 40px;
+			}
 		}
 	}
 }
@@ -644,7 +683,9 @@ u{
 			justify-content: space-between;
 		}
 		&nav{
-
+			+mq(sm){
+				display: none;
+			}
 		}
 		&item{
 			color: $muted_text;
@@ -652,6 +693,11 @@ u{
 		&brand{
 			max-width: 50%;
 			display: flex;
+			
+			+mq(sm){
+				display: block;
+				max-width: none;
+			}
 		}
 		&logo{
 			color: $brand_text;
@@ -735,4 +781,8 @@ u{
 
 #venue{
 	padding-bottom: 240px;
+	
+	+mq(sm){
+		padding-bottom: 0;
+	}
 }
