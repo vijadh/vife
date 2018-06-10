@@ -1036,6 +1036,11 @@ u {
   color: #666;
   max-width: 360px;
 }
+@media (max-width: 799px) {
+  .vd-menu {
+    display: none;
+  }
+}
 .vd-menu__container {
   position: fixed;
   right: 32px;
