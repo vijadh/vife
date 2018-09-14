@@ -18,3 +18,9 @@ version: "?v=1.2"
 
 #plugins:
 #  - directory_tag
+
+
+plugins:
+  - jekyll-redirect-from
+#https://github.com/jekyll/jekyll-redirect-from    
+#https://superdevresources.com/redirects-jekyll-github-pages/
