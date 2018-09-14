@@ -1,51 +1,51 @@
-<div class="vd-section vd-spacer" id="vipic" data-menu-title="ViPic">
-    <div class="vd-section__container">
-        <div class="vd-section__header">
-            <div class="vd-section__headline">ViPic</div>
-            <div class="vd-section__desc">Videos and Pictures of our life events</div>
+<div class="vdw-section vdw-spacer" id="vipic" data-menu-title="ViPic">
+    <div class="vdw-section__container">
+        <div class="vdw-section__header">
+            <div class="vdw-section__headline">ViPic</div>
+            <div class="vdw-section__desc">Videos and Pictures of our life events</div>
         </div>
 
         {% for dataVP in site.data.vipic %}
-        <div class="vd-section__block" id="{{ dataVP.module }}">
-            <div class="vd-section__main">
-                <div class="vd-section__paper">
-                    <div class="vd-section__title">{{ dataVP.title }}</div>
-                    <div class="vd-section__mark">{{ dataVP.mark }}</div>
-                    <div class="vd-section__caption">{{ dataVP.caption }}</div>
-                    <!-- <div class="vd-section__list">
-                        <div class="vd-section__item vd-section__item--active"><a>Couple</a></div>
-                        <div class="vd-section__item"><a>People</a></div>
-                        <div class="vd-section__item"><a>Hall</a></div>
-                        <div class="vd-section__item"><a>Dining</a></div>
+        <div class="vdw-section__block" id="{{ dataVP.module }}">
+            <div class="vdw-section__main">
+                <div class="vdw-section__paper">
+                    <div class="vdw-section__title">{{ dataVP.title }}</div>
+                    <div class="vdw-section__mark">{{ dataVP.mark }}</div>
+                    <div class="vdw-section__caption">{{ dataVP.caption }}</div>
+                    <!-- <div class="vdw-section__list">
+                        <div class="vdw-section__item vdw-section__item--active"><a>Couple</a></div>
+                        <div class="vdw-section__item"><a>People</a></div>
+                        <div class="vdw-section__item"><a>Hall</a></div>
+                        <div class="vdw-section__item"><a>Dining</a></div>
                     </div> -->
                 </div>
             </div>
-            <div class="vd-section__aside">
-                 <div class="vd-vipics">
+            <div class="vdw-section__aside">
+                 <div class="vdw-vipics">
                     {% directory path: "{{ dataVP.pic }}"%}
                     {% if forloop.first %}
-                    <div class="vd-vipics__block" vipic-slider-parent="true">
-                        <div class="vd-vipics__header">
-                            <div class="vd-vipics__title">Pictures ({{ forloop.length }})</div>
-                            <div class="vd-vipics__nav">
-                                <div class="vd-vipics__prev"><</div>
-                                <div class="vd-vipics__next">></div>
+                    <div class="vdw-vipics__block" vipic-slider-parent="true">
+                        <div class="vdw-vipics__header">
+                            <div class="vdw-vipics__title">Pictures ({{ forloop.length }})</div>
+                            <div class="vdw-vipics__nav">
+                                <div class="vdw-vipics__prev"><</div>
+                                <div class="vdw-vipics__next">></div>
                             </div>
                         </div>
-                        <div class="vd-vipics__content" vipic-slider="true">
-                            <div class="vd-vipics__list" vipic-slider-child="true">
+                        <div class="vdw-vipics__content" vipic-slider="true">
+                            <div class="vdw-vipics__list" vipic-slider-child="true">
                     {% endif %}
-                                <div class="vd-vipics__item">
-                                    <div class="vd-vipic">
-                                        <div class="vd-vipic__container">
-                                            <div class="vd-vipic__thumb">
+                                <div class="vdw-vipics__item">
+                                    <div class="vdw-vipic">
+                                        <div class="vdw-vipic__container">
+                                            <div class="vdw-vipic__thumb">
                                                 {% if file.slug contains 'center' %}
                                                     <img src="{{ file.url }}" alt="{{ file.slug }}" style="top:-50%">
                                                 {% else %}
                                                     <img src="{{ file.url }}" alt="{{ file.slug }}">
                                                 {% endif %}
                                             </div>
-                                            <div class="vd-vipic__title">{{ file.slug | capitalize | replace: '-', ' ' | remove: 'center' | remove: 0 | remove: 1 | remove: 2 | remove: 3 | remove: 4 | remove: 5 | remove: 6 | remove: 7 | remove: 8 | remove: 9 }}</div>
+                                            <div class="vdw-vipic__title">{{ file.slug | capitalize | replace: '-', ' ' | remove: 'center' | remove: 0 | remove: 1 | remove: 2 | remove: 3 | remove: 4 | remove: 5 | remove: 6 | remove: 7 | remove: 8 | remove: 9 }}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -58,27 +58,27 @@
                     
                     {% for dataVPvi in dataVP.vi %}
                     {% if forloop.first %}
-                    <div class="vd-vipics__block">
-                        <div class="vd-vipics__header">
-                            <div class="vd-vipics__title">Videos ({{ forloop.length }})</div>
-                            <div class="vd-vipics__nav">
-                                <div class="vd-vipics__prev"><</div>
-                                <div class="vd-vipics__next">></div>
+                    <div class="vdw-vipics__block">
+                        <div class="vdw-vipics__header">
+                            <div class="vdw-vipics__title">Videos ({{ forloop.length }})</div>
+                            <div class="vdw-vipics__nav">
+                                <div class="vdw-vipics__prev"><</div>
+                                <div class="vdw-vipics__next">></div>
                             </div>
                         </div>
-                        <div class="vd-vipics__content">
-                            <div class="vd-vipics__list">
+                        <div class="vdw-vipics__content">
+                            <div class="vdw-vipics__list">
                     {% endif %}
                                 
-                                <div class="vd-vipics__item">
-                                    <div class="vd-vipic">
-                                        <div class="vd-vipic__container">
-                                            <div class="vd-vipic__thumb">
+                                <div class="vdw-vipics__item">
+                                    <div class="vdw-vipic">
+                                        <div class="vdw-vipic__container">
+                                            <div class="vdw-vipic__thumb">
                                                 <iframe type="text/html" width="100%" height="100%"
                                                   src="https://www.youtube.com/embed/{{ dataVPvi.url }}"
                                                   frameborder="0"></iframe>
                                             </div>
-                                            <div class="vd-vipic__title">{{ dataVPvi.title }}</div>
+                                            <div class="vdw-vipic__title">{{ dataVPvi.title }}</div>
                                         </div>
                                     </div>
                                 </div>
