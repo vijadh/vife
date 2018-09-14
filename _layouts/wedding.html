@@ -2,6 +2,7 @@
 <html>
     <head>
         {% include basic/meta.html %}
+        <link rel="stylesheet" type="text/css" href="{{site.baseurl}}assets/css/wedding.css{{site.version}}">
     </head>
     <body>
         <div class="vd-wrapper">
@@ -21,19 +22,20 @@
                         {% include wedding/venue.html %}
                         
                         <!-- gallery -->
-                        {% include wedding/rsvp.html %}
+                        <!-- {% include wedding/rsvp.html %} -->
                     </div>
                     <!-- footer -->
-                    {% include default/footer.html %}
+                    {% include wedding/footer.html %}
                 </div>
             </div>
         </div>
 
         <!-- menu -->
-        {% include default/menu.html %}
+        {% include wedding/menu.html %}
         <!-- javascript -->
         {% include basic/js.html %}
+        {% include wedding/js.html %}
         <!-- svg -->
-        {% include basic/svg.html %}
+        <!-- {% include basic/svg.html %} -->
     </body>
 </html>
