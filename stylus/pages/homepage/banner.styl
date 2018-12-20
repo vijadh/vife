@@ -1,56 +1,31 @@
-{$prew}{$banner}{
-    // min-height: 600px;
+{$banner}{
     position: relative;
-    z-index: 9;
-    // background: url(../images/wide/couple.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    // color: $color_white;
-    font-weight: $weight_light;
-    clearfix();
-
-    a{
-        color: inherit;
-    }
     &__{
-        &container{
-            display: flex;
+        &cover{
+            height: 600px;
+            min-height: 88vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment fixed;
+            position: relative;
+            overflow: hidden;
         }
-        &thumb{
-            line-height: 0;
-        }
-        &main{            
-            flex: 1;
-        }
-        &content{
-            padding: 40px;
-
-            +mq(gt-md){
-                padding: 80px;
-            }
-        }
-        &title{
-            font-size: $size_xl;
-            line-height: 1.2;
-            font-family: $family_serif;
-
-            +mq(gt-md){
-                font-size: 54px;
-            }
+        &image{
+            width: 100%;
+            height: auto;
+            max-width 100%;
+            // max-height: 100%;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
         }
         &caption{
-            color: $muted_text;
-            font-size: $size_lg;
-            margin-top: 24px;
-            max-width: 400px;
-        }
-        &mark{
-            font-size: 60px;
-
-            +mq(gt-md){
-                font-size: 120px;
-                color: $brand_text;
-            }
+            position: absolute;
+            // left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,.8);
+            padding: 12px 24px;            
         }
     }
 }

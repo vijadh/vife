@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline-width: 0 !important;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html {
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background-color: #28292e;
+  background-image: url("../images/brand/love-icon.svg");
+  background-blend-mode: exclusion;
+  color: #fff;
+}
+@media (max-width: 999px) {
+  body {
+    font-size: 18px;
+  }
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+progress {
+  vertical-align: baseline;
+}
+template,
+[hidden] {
+  display: none;
+}
+img {
+  border-width: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+iframe {
+  border-width: 0;
+}
+hr {
+  border-width: 0;
+  height: 1px;
+  background-color: $border_color_base;
+  overflow: visible;
+}
+h1 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+h3 {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+h4 {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+h5 {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+h6 {
+  font-size: 10px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+h1:not(:first-of-type),
+h2:not(:first-of-type),
+h3:not(:first-of-type),
+h4:not(:first-of-type),
+h5:not(:first-of-type),
+h6:not(:first-of-type) {
+  margin-top: 24px;
+}
+p:not(:last-child) {
+  margin-bottom: 12px;
+}
+a {
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fdb302;
+}
+a:active,
+a:hover {
+  color: #f0aa02;
+}
+b,
+strong {
+  font-weight: 600;
+}
+small {
+  font-size: 12px;
+}
+address {
+  font-style: normal;
+}
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+}
+dl {
+  display: block;
+  margin: 0;
+}
+dt {
+  font-weight: 600;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th,
+td {
+  border-width: 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+optgroup {
+  font-weight: 600;
+}
+label {
+  font-weight: 500;
+  margin-bottom: 0;
+}
+button,
+input,
+select {
+  overflow: visible;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+}
+[disabled] {
+  cursor: not-allowed;
+}
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button:-moz-focusring,
+input:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+.vd-header__brand {
+  padding: 12px 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 8888;
+  font-size: 24px;
+  background-color: #28292e;
+  color: #fff;
+}
+.vd-header__logo:after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  margin-left: 12px;
+  background-color: currentColor;
+  height: 2px;
+  border-radius: 4px;
+  vertical-align: middle;
+  -webkit-box-shadow: 0 6px 0 currentColor, 0 -6px 0 currentColor;
+          box-shadow: 0 6px 0 currentColor, 0 -6px 0 currentColor;
+/* width: 0; */
+/* height: 0; */
+/* border-left: 6px solid transparent; */
+/* border-right: 6px solid transparent; */
+/* border-top: 6px solid; */
+}
+.vd-banner {
+  position: relative;
+}
+.vd-banner__cover {
+  height: 600px;
+  min-height: 88vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+.vd-banner__image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.vd-banner__caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+  padding: 12px 24px;
+}
+.vd-container {
+  max-width: 1648px;
+  padding: 24px;
+  margin: 0 auto;
+}
+.vd-section {
+  position: relative;
+  padding: 120px 0;
+}
+.vd-section__title {
+  display: inline;
+}

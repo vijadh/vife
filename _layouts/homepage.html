@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include basic/meta.html %}     
+        <link rel="stylesheet" type="text/css" href="{{site.baseurl}}assets/css/main.css{{site.version}}">   
+    </head>
+    <body>
+        <div class="vd-wrapper">
+            <div class="vd-wrapper__container">
+                <div class="vd-wrapper__header">
+                    {% include homepage/header.html %}
+                </div>
+                <div class="vd-wrapper__content">
+                    {% include homepage/banner.html %}
+                    {% include homepage/section.html %}
+                </div>
+                <div class="vd-wrapper__footer">
+                </div>
+            </div>
+        </div>
+        
+        <div class="vd-unwrap">
+            <!-- javascript -->
+            {% include basic/js.html %}
+        </div>
+    </body>
+</html>
